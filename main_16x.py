@@ -31,7 +31,9 @@ parser.add_argument('--gpu_mode', type=bool, default=True)
 parser.add_argument('--threads', type=int, default=6, help='number of threads for data loader to use')
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
 parser.add_argument('--gpus', default=2, type=int, help='number of gpu')
+
 parser.add_argument('--data_dir', type=str, default='/home/AIM/data/DIV8K')
+
 parser.add_argument('--data_augmentation', type=bool, default=True)
 parser.add_argument('--model_type', type=str, default='VAE')
 parser.add_argument('--patch_size', type=int, default=32, help='Size of cropped LR image')

@@ -17,7 +17,7 @@ def transform():
 
 def get_training_set(data_dir, upscale_factor, patch_size, data_augmentation):
     hr_dir = join(data_dir, 'HR')
-    lr_dir = join(data_dir, 'LR_16x')
+    lr_dir = join(data_dir, 'LR_4x')
     return DatasetFromFolder(hr_dir, lr_dir, patch_size, upscale_factor, data_augmentation,
                              transform=transform())
 

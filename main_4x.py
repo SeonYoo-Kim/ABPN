@@ -28,10 +28,13 @@ parser.add_argument('--snapshots', type=int, default=10, help='Snapshots')
 parser.add_argument('--start_iter', type=int, default=1, help='Starting Epoch')
 parser.add_argument('--lr', type=float, default=1e-4, help='Learning Rate. Default=0.0001')
 parser.add_argument('--gpu_mode', type=bool, default=True)
+
 parser.add_argument('--threads', type=int, default=6, help='number of threads for data loader to use')
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
 parser.add_argument('--gpus', default=1, type=int, help='number of gpu')
+
 parser.add_argument('--data_dir', type=str, default='/home/data1/DIV2K+Flickr')
+
 parser.add_argument('--data_augmentation', type=bool, default=True)
 parser.add_argument('--model_type', type=str, default='VAE')
 parser.add_argument('--patch_size', type=int, default=40, help='Size of cropped LR image')

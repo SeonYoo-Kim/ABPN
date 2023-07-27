@@ -91,8 +91,9 @@ class DatasetFromFolder(data.Dataset):
         target = load_img(self.hr_image_filenames[index])
         name = self.hr_image_filenames[index]
         #lr_name = name[:39]+'LR/'+name[42:-4]+'x4.png'
+        lr_name = name[:39] + 'LR_4x/' + name[42:]
         #lr_name = name[:39]+'LR_16x/'+name[42:]
-        lr_name = name[:32]+'LR_16x/'+name[35:]
+        #lr_name = name[:32]+'LR_16x/'+name[35:]
         input = load_img(lr_name)
 
         input, target, = get_patch(input, target, self.patch_size, self.upscale_factor)
