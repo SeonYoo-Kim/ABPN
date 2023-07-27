@@ -33,7 +33,7 @@ parser.add_argument('--threads', type=int, default=6, help='number of threads fo
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
 parser.add_argument('--gpus', default=1, type=int, help='number of gpu')
 
-parser.add_argument('--data_dir', type=str, default='/home/data1/DIV2K+Flickr')
+parser.add_argument('--data_dir', type=str, default='D:/superResolution/DIV2K+Flickr')
 
 parser.add_argument('--data_augmentation', type=bool, default=True)
 parser.add_argument('--model_type', type=str, default='VAE')
@@ -157,3 +157,6 @@ for epoch in range(opt.start_iter, opt.nEpochs + 1):
 
     if epoch % (opt.snapshots) == 0:
         checkpoint(epoch)
+
+if __name__ == '__main__':
+        run()
